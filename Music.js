@@ -36,50 +36,26 @@ let allMusic = [
     },
     {
         name: "Girls Like You",
-        artist: "Justin Bieber",
-        img:"music-3",
+        artist: "Paul Sheehan",
+        img:"music-4",
         src:"music-4"
     },
     {
         name: "On my way",
-        artist: "Justin Bieber",
-        img:"music-3",
+        artist: "Alan Walker",
+        img:"music-5",
         src:"music-5"
     },
     {
         name: "Hymn for weekend",
-        artist: "Justin Bieber",
-        img:"music-3",
+        artist: "Guy Berryman",
+        img:"music-6",
         src:"music-6"
     },
     {
         name: "Dusk till Dawn",
-        artist: "Justin Bieber",
-        img:"music-3",
-        src:"music-7"
-    },
-    {
-        name: "Girls Like You",
-        artist: "Justin Bieber",
-        img:"music-3",
-        src:"music-4"
-    },
-    {
-        name: "On my way",
-        artist: "Justin Bieber",
-        img:"music-3",
-        src:"music-5"
-    },
-    {
-        name: "Hymn for weekend",
-        artist: "Justin Bieber",
-        img:"music-3",
-        src:"music-6"
-    },
-    {
-        name: "Dusk till Dawn",
-        artist: "Justin Bieber",
-        img:"music-3",
+        artist: "Robert Kurtzman",
+        img:"music-7",
         src:"music-7"
     }
 ];
@@ -211,7 +187,6 @@ for (let index = 0; index < allMusic.length; index++){
                         <p id="playlist-song-artist">${allMusic[index].artist}</p>
                     </div>
                     <audio id="${allMusic[index].src}" src="Music/${allMusic[index].src}.mp3"></audio>
-                    <span id="${allMusic[index].src}" class="audio-duration">3:40m</span>
                 </li>`
 
     ulTag.insertAdjacentHTML("beforeend", liTag);

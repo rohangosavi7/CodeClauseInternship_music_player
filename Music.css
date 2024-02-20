@@ -202,19 +202,21 @@ img {
 
 /* playlist container */
 .song-details-container{
-  margin-top: 2.4rem;
+  margin-top: 2rem;
   height: 100%;
   overflow-y: auto;
+  width: 100%;
 
 }
 
 .song-details-container li{
   list-style: none;
+  width: 100%;
 }
 .song-details-container ul li{
   background-color: #4478d2e3;
   height: 4.5vmax;
-  width: 100%;
+  width: 100vw;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -261,13 +263,6 @@ img {
   cursor: pointer;
 }
 
-#playlist{
-
-}
-
-
-
-
 
 /* -------------Volume---------------- */
 .volume_slider {
@@ -309,5 +304,119 @@ img {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+
+  .main_div {
+    padding: 2rem 1rem;
+    width: 100vw;
+    height: 100%;
+    flex-direction: column;
+  }
+  #border-line{
+    height:2px;
+    background-color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #border-line-vertical{
+    width:2px;
+    background-color: #ffffff;
+  }
+  .musicContainer, .playlistContainer {
+    padding: 1%;
+  }
+  .progress-area{
+    margin-top: 100px;
+    height: 50px;
+    margin: auto auto;
+    padding: 10px 20px 60px 20px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer; 
+  }
+  .progress-area .progress-bar{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    margin:0 0;
+    padding: 5px;
+    border-radius: inherit;
+    background-color: #34acb4;
+  
+  }
+  .progress-area:hover .progress-bar::before{
+    opacity:1;
+  }
+  
+  .progress-area .timer{
+    margin-top: 1rem;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+  }
+  .progress-area .timer .current, .duration{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight : 300;
+  }
+  .playlistContainer{
+    width: 100%;
+  }
+  .musicContainer #title {
+    margin: 2rem 0 0 0;  
+  }
+  .musicContainer #artist {
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  audio {
+    display: none;
+  }
+  .img_container {
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .music_controls .fa-solid {
+    width: 5rem;
+    height: 5rem;
+  }
+  .music_controls {
+    width: 20rem;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  
+  .music_controls .main-button {
+    width: 4rem;
+    height: 4rem;
+  }
+  .slider_container{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .slider_container i {
+    width: 1.2vmax;
+    height: 1.2vmax;
+    padding: 20px 0;
+    font-size: 2vmax;
+  }
+  .playlistContainer{
+    overflow: auto !important;
+
+  }
+  #playlist{
+    overflow: scroll !important;
   }
 }
